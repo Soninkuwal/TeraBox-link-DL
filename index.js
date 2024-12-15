@@ -62,7 +62,7 @@ const checkSubscription = async (userId) => {
 // Updated sendStartMessage to include image
 const sendStartMessage = (chatId) => {
     bot.sendPhoto(chatId, 'https://i.imgur.com/6cUMqLc.jpeg', {
-        caption: `👋 *Welcome to TeraBox Video Player Bot!*\n\n*Paste your TeraBox link and watch your video instantly—no TeraBox app needed!*\n\nPlease subscribe to our [Updates Channel](https://t.me/Opleech_WD) and click /start again to begin using the bot.`,
+        caption: `👋 *Welcome to TeraBox Video Player Bot!*\n\n*Paste your TeraBox link and watch your video instantly—no TeraBox app needed!*\n\nPlease subscribe to our [Updates Channel](https://t.me/SONICKUWALUPDATEKANHA) and click /start again to begin using the bot.`,
         parse_mode: 'Markdown',
         reply_markup: {
             inline_keyboard: [
@@ -211,7 +211,7 @@ bot.on('message', async (msg) => {
         bot.sendMessage(chatId, `🔄 *Processing your link...*`).then(sentMessage => {
     const messageId = sentMessage.message_id;
 
-    axios.get(`https://seturl.in/?link=${text}&apikey=cc9b50e7761907282b21e24ead6dd5d9f621218a`)
+    axios.get(`https://tera.ronok.workers.dev/?link=${text}&apikey=cc9b50e7761907282b21e24ead6dd5d9f621218a`)
         .then(response => {
             const downloadUrl = response.data.url;
 
